@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+:root {
+  --primary-color: #ff4d94;
+  --secondary-color: #fff0f5;
+  --text-color: #333;
+  --bg-color: #fefefe;
+  --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  --radius: 12px;
+  --transition: 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: linear-gradient(to right, #ffe0ec, #ffffff);
+  color: var(--text-color);
+  line-height: 1.6;
+  padding: 40px 20px;
+}
+
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: var(--bg-color);
+  padding: 30px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  border: 1px solid #f3f3f3;
+}
+
+h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 28px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="file"] {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: var(--radius);
+  transition: var(--transition);
+  font-size: 16px;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(255, 77, 148, 0.2);
+}
+
+button {
+  padding: 12px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--radius);
+  font-size: 16px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button:hover {
+  background-color: #e63881;
+}
+
+button:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+#clickCounter {
+  font-size: 14px;
+  font-weight: 500;
+  color: #777;
+  text-align: center;
+}
+
+#message {
+  font-size: 16px;
+  color: green;
+  text-align: center;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+}
